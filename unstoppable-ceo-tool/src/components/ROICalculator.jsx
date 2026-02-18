@@ -49,7 +49,7 @@ const ROICalculator = () => {
       >
         <div className="inline-block px-4 py-2 bg-navy/5 border border-navy/20 rounded-full mb-4">
           <span className="text-xs font-bold tracking-[0.15em] text-navy uppercase">
-            Step 2 of 2
+            Step 3 of 4
           </span>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-navy mb-3">

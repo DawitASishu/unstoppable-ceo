@@ -22,7 +22,7 @@ const FinalResults = () => {
   
   return (
     <motion.div 
-      className="min-h-screen py-12 px-4 md:px-6 lg:px-8"
+      className="min-h-screen pt-24 pb-12 px-4 md:px-6 lg:px-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -35,7 +35,7 @@ const FinalResults = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <div className="inline-block px-4 py-2 bg-green-100 border border-green-300 rounded-full mb-4">
+          <div className="inline-block px-4 py-2 bg-green-100 border border-green-300 rounded-full mb-4 mt-6">
             <span className="text-xs font-bold tracking-[0.15em] text-green-600 uppercase">
               ✓ Diagnostic Complete
             </span>
