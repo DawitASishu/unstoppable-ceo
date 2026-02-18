@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="#0a0a12" stroke="#c8ff00" stroke-width="3"/>
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#c8ff00" stroke-width="2" opacity="0.5"/>
+  <circle cx="50" cy="50" r="15" fill="#c8ff00"/>
+  <text x="50" y="56" text-anchor="middle" fill="#0a0a12" font-family="Arial" font-weight="bold" font-size="14">U</text>
+</svg>

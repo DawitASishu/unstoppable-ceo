@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased text-navy;
+    background: linear-gradient(180deg, #FDFCF7 0%, #F5F1E3 100%);
+    min-height: 100vh;
+  }
+  
+  ::selection {
+    background: rgba(26, 39, 68, 0.2);
+    color: #1a2744;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 
+           bg-navy text-white font-semibold rounded-xl
+           transition-all duration-300 ease-out
+           hover:bg-navy-dark hover:shadow-navy
+           active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed
+           uppercase tracking-wider text-sm;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-cream-200 text-navy font-semibold rounded-xl border-2 border-cream-400
+           transition-all duration-300 ease-out
+           hover:bg-cream-300 hover:border-cream-500
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border-2 border-cream-300 rounded-xl
+           text-navy placeholder:text-cream-600 font-medium
+           transition-all duration-200
+           focus:outline-none focus:border-navy focus:ring-4 focus:ring-navy/10;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl border border-cream-300 shadow-soft
+           transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-medium hover:border-cream-400;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5D9A8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4C78A;
+}
+
+/* Number input arrows removal */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
