@@ -22,7 +22,7 @@ const FinalResults = () => {
   
   return (
     <motion.div 
-      className="min-h-screen py-12 px-4 md:px-6 lg:px-8"
+      className="min-h-screen pt-24 pb-12 px-4 md:px-6 lg:px-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
