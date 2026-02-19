@@ -315,7 +315,7 @@ const FrameworkDiagram = memo(({ frameworkData, totalScore, size = 'large' }) =>
         <p className="text-[10px] font-semibold text-navy/50 uppercase tracking-widest">Your Framework Score</p>
         <motion.div className="flex items-baseline justify-center gap-1" key={totalScore} initial={{ scale: 1.1 }} animate={{ scale: 1 }}>
           <span className="text-4xl font-display font-bold text-navy">{totalScore}</span>
-          <span className="text-lg text-navy/40 font-semibold">/ 100</span>
+          <span className="text-lg text-navy/40 font-semibold">/ 90</span>
         </motion.div>
       </div>
     </div>

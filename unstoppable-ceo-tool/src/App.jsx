@@ -3,8 +3,8 @@ import { SessionProvider, useSession } from './context/SessionContext';
 import ProgressIndicator from './components/ProgressIndicator';
 import AccessGate from './components/AccessGate';
 import FrameworkScoringInteractive from './components/FrameworkScoringInteractive';
-import ROICalculator from './components/ROICalculator';
-import FinalResults from './components/FinalResults';
+import ROICalculatorNew from './components/ROICalculatorNew';
+import FinalResultsNew from './components/FinalResultsNew';
 
 const StageRenderer = () => {
   const { stage } = useSession();
@@ -13,8 +13,8 @@ const StageRenderer = () => {
     <AnimatePresence mode="wait">
       {stage === 'gate' && <AccessGate key="gate" />}
       {stage === 'framework' && <FrameworkScoringInteractive key="framework" />}
-      {stage === 'roi' && <ROICalculator key="roi" />}
-      {stage === 'results' && <FinalResults key="results" />}
+      {stage === 'roi' && <ROICalculatorNew key="roi" />}
+      {stage === 'results' && <FinalResultsNew key="results" />}
     </AnimatePresence>
   );
 };
