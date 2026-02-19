@@ -1,9 +1,9 @@
-// The 10 Framework Categories (matching the circular diagram)
+// The 9 Framework Categories (matching the circular diagram)
 export const FRAMEWORK_CATEGORIES = [
   {
-    id: 'avatar',
-    name: 'Avatar',
-    description: 'Your ideal client profile',
+    id: 'offer-trifecta',
+    name: 'Offer Trifecta',
+    description: 'Your strategic offer ecosystem',
     position: 0
   },
   {
@@ -13,15 +13,15 @@ export const FRAMEWORK_CATEGORIES = [
     position: 1
   },
   {
-    id: 'stages',
-    name: 'Stages',
-    description: 'Your client journey stages',
-    position: 2
-  },
-  {
     id: 'story-selling',
     name: 'Story Selling',
     description: 'Your narrative sales approach',
+    position: 2
+  },
+  {
+    id: 'fame-freedom-stages',
+    name: 'Fame Freedom Stages',
+    description: 'Your client journey stages',
     position: 3
   },
   {
@@ -31,14 +31,14 @@ export const FRAMEWORK_CATEGORIES = [
     position: 4
   },
   {
-    id: 'pitches',
-    name: 'Pitches',
+    id: 'fame-freedom-pitches',
+    name: 'Fame Freedom Pitches',
     description: 'Your pitch presentations',
     position: 5
   },
   {
-    id: 'follow-ups',
-    name: 'Follow Ups',
+    id: 'fame-freedom-follow-up',
+    name: 'Fame Freedom Follow Up',
     description: 'Your follow-up systems',
     position: 6
   },
@@ -49,46 +49,40 @@ export const FRAMEWORK_CATEGORIES = [
     position: 7
   },
   {
-    id: 'offer',
-    name: 'Offer',
-    description: 'Your core offer structure',
+    id: 'called-to-client',
+    name: 'Called to Client',
+    description: 'Your ideal client profile',
     position: 8
   },
-  // {
-  //   id: 'profits',
-  //   name: 'Profits',
-  //   description: 'Your profit optimization',
-  //   position: 9
-  // }
 ];
 
 // Diagram configuration - all positions relative to center (cx, cy)
-// Outer ring segments (9 categories - PROFITS is a Venn circle)
+// Outer ring segments (9 categories)
 export const DIAGRAM_OUTER_SEGMENTS = [
-  { id: 'avatar', name: 'AVATAR', startAngle: -20, endAngle: 20 },
+  { id: 'offer-trifecta', name: 'OFFER TRIFECTA', startAngle: -20, endAngle: 20 },
   { id: 'promise', name: 'PROMISE', startAngle: 20, endAngle: 60 },
-  { id: 'stages', name: 'STAGES', startAngle: 60, endAngle: 100 },
-  { id: 'story-selling', name: 'STORY SELLING', startAngle: 100, endAngle: 140 },
+  { id: 'story-selling', name: 'STORY SELLING', startAngle: 60, endAngle: 100 },
+  { id: 'fame-freedom-stages', name: 'FAME FREEDOM STAGES', startAngle: 100, endAngle: 140 },
   { id: 'cta', name: 'CTA', startAngle: 140, endAngle: 180 },
-  { id: 'pitches', name: 'PITCHES', startAngle: 180, endAngle: 220 },
-  { id: 'follow-ups', name: 'FOLLOW UPS', startAngle: 220, endAngle: 260 },
+  { id: 'fame-freedom-pitches', name: 'FAME FREEDOM PITCHES', startAngle: 180, endAngle: 220 },
+  { id: 'fame-freedom-follow-up', name: 'FAME FREEDOM FOLLOW UP', startAngle: 220, endAngle: 260 },
   { id: 'pipeline', name: 'PIPELINE', startAngle: 260, endAngle: 300 },
-  { id: 'offer', name: 'OFFER', startAngle: 300, endAngle: 340 },
+  { id: 'called-to-client', name: 'CALLED TO CLIENT', startAngle: 300, endAngle: 340 },
 ];
 
 // Venn circle labels (3 main circles) - offsets from their circle centers
 export const DIAGRAM_VENN_LABELS = {
-  profits: { name: 'PROFITS', offsetX: 0, offsetY: -83, fontSize: 13 },
-  persistence: { name: 'PERSISTENCE', offsetX: -55, offsetY: 10, fontSize: 10 },
-  presence: { name: 'PRESENCE', offsetX: 55, offsetY: 10, fontSize: 10 },
+  unstoppableOffer: { name: 'UNSTOPPABLE OFFER', offsetX: 0, offsetY: -65, fontSize: 10 },
+  unstoppableCustomerFlow: { name: 'UNSTOPPABLE\nCUSTOMER FLOW', offsetX: -50, offsetY: 20, fontSize: 7, multiline: true },
+  unstoppableSales: { name: 'UNSTOPPABLE\nSALES', offsetX: 50, offsetY: 20, fontSize: 8, multiline: true },
 };
 
 // Intersection labels - offsets from diagram center (cx, cy)
 export const DIAGRAM_INTERSECTION_LABELS = {
-  attractive: { name: 'ATTRACTIVE', offsetX: -60, offsetY: -40, fontSize: 8 },
-  abundant: { name: 'ABUNDANT', offsetX: 60, offsetY: -40, fontSize: 8 },
+  attractive: { name: 'ATTRACTIVE', offsetX: -65, offsetY: -35, fontSize: 8 },
+  abundant: { name: 'ABUNDANT', offsetX: 65, offsetY: -35, fontSize: 8 },
   authoritative: { name: 'AUTHORITATIVE', offsetX: 0, offsetY: 65, fontSize: 8 },
-  unstoppable: { name: 'UNSTOPPABLE', offsetX: 0, offsetY: -3, fontSize: 10, highlight: true },
+  unstoppableCeo: { name: 'UNSTOPPABLE CEO', offsetX: 0, offsetY: 5, fontSize: 9, highlight: true },
 };
 
 // Side badges

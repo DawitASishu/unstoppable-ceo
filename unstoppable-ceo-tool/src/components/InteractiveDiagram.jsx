@@ -1,5 +1,5 @@
-import { memo, useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { memo, useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   getScoreColor, 
   DIAGRAM_OUTER_SEGMENTS, 
@@ -130,9 +130,9 @@ const InteractiveDiagram = memo(({
   };
 
   const getVennCenter = (key) => {
-    if (key === 'profits') return profitsCenter;
-    if (key === 'persistence') return persistenceCenter;
-    if (key === 'presence') return presenceCenter;
+    if (key === 'unstoppableOffer') return profitsCenter;
+    if (key === 'unstoppableCustomerFlow') return persistenceCenter;
+    if (key === 'unstoppableSales') return presenceCenter;
     return { x: cx, y: cy };
   };
 
@@ -215,7 +215,7 @@ const InteractiveDiagram = memo(({
                   transform={`rotate(${textRotation}, ${labelPos.x}, ${labelPos.y})`}
                   fill={strokeColor}
                   fontWeight="700"
-                  fontSize="10"
+                  fontSize="8"
                   style={{ pointerEvents: 'none' }}
                 >
                   {seg.name}
@@ -267,6 +267,26 @@ const InteractiveDiagram = memo(({
           {/* Venn circle labels */}
           {Object.entries(DIAGRAM_VENN_LABELS).map(([key, label]) => {
             const center = getVennCenter(key);
+            if (label.multiline) {
+              const lines = label.name.split('\n');
+              return (
+                <text 
+                  key={key}
+                  x={center.x + label.offsetX} 
+                  y={center.y + label.offsetY} 
+                  textAnchor="middle" 
+                  fill={strokeColor} 
+                  fontWeight="700" 
+                  fontSize={label.fontSize}
+                >
+                  {lines.map((line, i) => (
+                    <tspan key={i} x={center.x + label.offsetX} dy={i === 0 ? 0 : label.fontSize + 2}>
+                      {line}
+                    </tspan>
+                  ))}
+                </text>
+              );
+            }
             return (
               <text 
                 key={key}
